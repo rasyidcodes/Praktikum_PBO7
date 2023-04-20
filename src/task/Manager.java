@@ -44,9 +44,20 @@ public class Manager  extends  Pegawai{
         this.ruangan = ruangan;
     }
 
+    //Override method getGaji dari pegawai
+    @Override
+    public int getGaji(){
+        return super.getGaji();
+    }
+
+    //Override method getThr dari pegawai
+    @Override
+    public int getThr() {
+        return super.getGaji() * 2;
+    }
 
 
-    //OVERLOADING AND OVERRIDINg METHOD SETNIP dengan param string
+    //OVERLOAD AND OVERRIDING METHOD setNip dengan param string
     @Override
     public void setNip(String nip) {
         if (nip.startsWith("M")){
@@ -54,7 +65,7 @@ public class Manager  extends  Pegawai{
         }
     }
 
-    //OVERLOADING AND OVERRIDINg METHOD SETNIP dengan param int
+    //OVERLOADING AND OVERRIDING METHOD setNip dengan param int
     @Override
     public void setNip(int urutanMasuk) {
         this.nip = "M000" + urutanMasuk;

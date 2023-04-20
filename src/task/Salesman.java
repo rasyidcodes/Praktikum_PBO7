@@ -12,27 +12,31 @@ public class Salesman extends Pegawai{
     }
 
 
+    //Override method getGaji dari pegawai
     @Override
     public int getGaji(){
-        return super.getGaji() + getBonus();
+        return super.getGaji();
     }
 
+    //Override method getThr dari pegawai
     @Override
     public int getThr() {
         if (penjualan >= target){
-            return super.getThr() * 2;
+            return super.getGaji() * 2;
         }else {
-            return super.getThr();
+            return super.getGaji();
         }
     }
 
+
+    //Override method setThr dari pegawai
     @Override
     public void setThr(int thr) {
         super.setThr(thr);
     }
 
 
-    //OVERLOADING AND OVERRIDINg METHOD SETNIP dengan param string
+    //OVERLOADING AND OVERRIDING METHOD setNip dengan param string
     @Override
     public void setNip(String nip) {
         if (nip.startsWith("S")){
@@ -40,7 +44,7 @@ public class Salesman extends Pegawai{
         }
     }
 
-    //OVERLOADING AND OVERRIDINg METHOD SETNIP dengan param int
+    //OVERLOADING AND OVERRIDING METHOD setNip dengan param int
     @Override
     public void setNip(int urutanMasuk) {
         this.nip = "S000" + urutanMasuk;
